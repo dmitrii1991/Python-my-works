@@ -1,7 +1,7 @@
 from openpyxl import load_workbook
 
 column = {}
-
+i = 1
 DAS = load_workbook('DAS.xlsx') #загружаем файл
 print(DAS.sheetnames) #показать все листы
 
