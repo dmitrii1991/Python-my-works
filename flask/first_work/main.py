@@ -15,6 +15,6 @@ def to_find() -> 'html':
 @app.route('/')
 @app.route('/entry')
 def entry_psge() -> 'html':
-    return render_template("entry.html", the_title='Welkome to the prjgramm!!')
+    return render_template("entry.html", the_title='Welkome to the programm!!')
 
 app.run(debug=True)
