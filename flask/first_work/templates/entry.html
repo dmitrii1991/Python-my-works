@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title}}</h2>
+
+<form method="POST" action="/find">
+    <table>
+        <p>Use this form to find letter in word/phrase:</p>
+        <tr><td>WORD:</td><td><input name='word/phrase' type= 'TEXT' widht='60'></td></tr>
+        <tr><td>Letters</td><td><input name="letters" type="TEXT" value="aeiou" </td></tr>
+    </table>
+    <p>Are you ready? CLICK this button!!!</p>
+    <p><input value="DO IT" type="SUBMIT"></p>
+</form>
+
+{% endblock %}
