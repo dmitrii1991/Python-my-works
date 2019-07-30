@@ -1,6 +1,5 @@
-
 def NOD_NOK(a: int, b: int):
-
+    """НОК и НОД"""
     def composit_numb(number: int):
         '''Возращает список простых чиселБ из кторых состоит данное вводимое число'''
         numbers = [1]
@@ -31,7 +30,6 @@ def NOD_NOK(a: int, b: int):
         '''Наименьшее общее кратное'''
         list_a = a.copy()
         list_b = b.copy()
-
         multiple = 1
         for let in list_a :
             if let in list_b:
@@ -46,7 +44,6 @@ def NOD_NOK(a: int, b: int):
 
     NOD_ab = NOD(num_a, num_b)
     print('НОД({},{}): '.format(a, b), NOD_ab)
-
     NOK_ab = NOK(num_a, num_b)
     print('НОК({},{}): '.format(a, b), NOK_ab)
 
