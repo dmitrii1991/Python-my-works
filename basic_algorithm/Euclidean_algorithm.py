@@ -1,13 +1,7 @@
 def gcd(a, b):
-    while True:
-        if a > b:
-            a = a % b
-            if a == 0:
-                return b
-        else:
-            b = b % a
-            if b == 0:
-                return a
+    while b:
+        a, b = b, a % b
+    return a
 
 
 def main():
