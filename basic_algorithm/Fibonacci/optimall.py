@@ -1,11 +1,8 @@
 def fib(n):
-    s = [0, 1]
-    if n in [0, 1]:
-        return n
+    f0, f1 = 0, 1
     for i in range(1, n):
-        s.append(s[-1]+s[-2])
-    c = s.pop()
-    return c
+        f0, f1 = f1, f0 + f1
+    return f1
 
 def main():
     n = int(input())
