@@ -25,7 +25,6 @@ def palindrome(word: str):
             letter_without_pair += 1
     return True
 
-
 @benchmark
 def doo(x):
     k = 0
