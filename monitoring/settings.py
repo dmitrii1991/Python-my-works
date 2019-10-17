@@ -19,7 +19,7 @@ number_of_threads = 5
 
 # базовые проверки для построение путей
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# данный путь задается автоматически, путь будет задан из консоли то в main.py перезапишется
+# данный путь задается автоматически, если путь будет задан из консоли то в main.py примет новое значение
 if os.path.exists(path_to_file):
     PATH_TO_XLSX = path_to_file
 else:
