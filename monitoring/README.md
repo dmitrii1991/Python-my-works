@@ -36,7 +36,7 @@ CONTENT_LENGTH  integer default null  (записываем если код от
 	      "exception_type": "...",
 	      "exception_value": "...",
 	      "stack_info": "..."
-  }
+          }
 }
 ```
 
