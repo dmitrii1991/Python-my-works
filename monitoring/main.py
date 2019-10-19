@@ -1,16 +1,17 @@
-import pandas as pd
+import sys
+import os.path
 import requests
 import sqlite3
 import time
 import datetime
-from settings import *
 import json
 import traceback
 import logging
-import sys
-import os.path
 import threading
 from pprint import pprint
+import pandas as pd
+
+from settings import *
 
 
 def create_monitoring_db(path: str):
