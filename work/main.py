@@ -4,14 +4,18 @@ import time
 
 
 def math_squares_of_odd(ls: list):
-    return sum([i ** 2 for i in ls if i % 2 == 1])
+    return sum((elem ** 2 for elem in ls if elem % 2 == 1))
 
 def benchmark(func):
     def wrapper(*args, **kwags):
-        start_func = time.time()
-        func(*args, **kwags)
-        end_func = time.time()
-        print('{} выполнила задачу за {} сек.'.format(func.__name__, round(end_func - start_func, 2)))
+        start_func = time.time_ns()
+        try:
+            func(*args, **kwags)
+            end_func = time.time_ns()
+            print('{} выполнила задачу за {} наносек.'.format(func.__name__, (end_func - start_func)))
+        except:
+            end_func = time.time_ns()
+            print('{} невыполнила задачу и закрашилась за {} наносек.'.format(func.__name__, (end_func - start_func)))
     return wrapper
 
 def palindrome(word: str):
