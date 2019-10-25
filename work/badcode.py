@@ -3,14 +3,12 @@
 def fun_func_with_correct(data):
     """optimized and fixed code"""
     if data:
-        if len(set([int(i) for i in data])) == 1:
-            return 1
-        if [int(i)+1 for i in data[:-1]] == [int(i) for i in data[1:]]:
-            return 1
-        if [int(i) for i in data[-2::-1]] == [int(i) + 1 for i in data[:0:-1]]:
-            return 1
-        return 0
-    raise ValueError("data is None")
+        if (len(set([int(i) for i in data])) == 1) or \
+                ([int(i)+1 for i in data[:-1]] == [int(i) for i in data[1:]]) or \
+                ([int(i) for i in data[-2::-1]] == [int(i) + 1 for i in data[:0:-1]]):
+            return True
+        return False
+    raise ValueError("data is None"))
 
 def fun_func_without_correct(data):
     """optimized code"""
